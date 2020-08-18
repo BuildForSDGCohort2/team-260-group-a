@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/BuildForSDGCohort2/team-260-group-a#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.0"
   },
   "devDependencies": {
