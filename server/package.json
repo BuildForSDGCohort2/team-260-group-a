@@ -1,0 +1,29 @@
+{
+  "name": "team-260-group-a",
+  "version": "1.0.0",
+  "description": "REST API for team-260-group-a",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildForSDGCohort2/team-260-group-a.git"
+  },
+  "keywords": [
+    "Back-end"
+  ],
+  "author": "Werner Barnard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BuildForSDGCohort2/team-260-group-a/issues"
+  },
+  "homepage": "https://github.com/BuildForSDGCohort2/team-260-group-a#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
