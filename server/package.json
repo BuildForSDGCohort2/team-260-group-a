@@ -4,7 +4,8 @@
   "description": "REST API for team-260-group-a",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "startDev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
