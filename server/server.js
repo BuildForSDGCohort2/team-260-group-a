@@ -19,6 +19,7 @@ app.use(express.json());
 
 //Routes
 const users = require("./routes/users");
+const products = require("./routes/products");
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -29,6 +30,7 @@ app.get("/secret", auth, (req, res) => {
 });
 
 app.use("/api/users", users);
+app.use("/api/products", products);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server running on Port: ${process.env.PORT}`);
