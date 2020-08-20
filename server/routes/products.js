@@ -9,6 +9,15 @@ router.get("/", async (req, res) => {
   res.json(products);
 });
 
+router.get("/:id", async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    res.json(product);
+  } catch (error) {
+    res.json({ message: "Product not found." });
+  }
+});
+
 router.post(
   "/",
   [
@@ -39,12 +48,37 @@ router.post(
   }
 );
 
-router.put("/:id", (req, res) => {
-  res.send("Update product here");
-});
+router.put(
+  "/:id",
+  [
+    body("title").isLength({ min: 6 }),
+    body("description").isLength({ min: 6 }),
+    body("price").isLength({ min: 3 }),
+    body("imageUrl").isLength({ min: 6 })
+  ],
+  async (req, res) => {
+    try {
+      const product = await Product.findById(req.params.id);
+      product.title = req.body.title;
+      product.description = req.body.description;
+      product.price = req.body.price;
+      product.imageUrl = req.body.imageUrl;
+      product.save();
+      res.json({ message: "Product has been updated." });
+    } catch (error) {
+      res.json({ message: "Product not found." });
+    }
+  }
+);
 
-router.delete("/:id", (req, res) => {
-  res.send("Delete product here");
+router.delete("/:id", async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    product.delete();
+    res.json({ message: "Product has been deleted" });
+  } catch (error) {
+    res.json({ message: "Product not found." });
+  }
 });
 
 module.exports = router;
