@@ -5,8 +5,8 @@
         <img class="w-50" src="./assets/logo.png" alt="Logo" />
       </a>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <div class="ml-auto">
+        <ul class="navbar-nav">
           <li class="nav-item mr-4">
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
@@ -25,8 +25,27 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
+
+    <div>
       <router-view />
     </div>
+
+    <footer class="footer w-100 bg-dark py-3">
+      <div class="container text-center">
+        <span class="text-white">Online Shop. 2020</span>
+      </div>
+    </footer>
   </div>
 </template>
+
+<style scoped>
+.nav-item {
+  font-weight: 700;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+</style>
