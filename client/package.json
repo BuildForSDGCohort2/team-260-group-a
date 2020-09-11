@@ -1,15 +1,18 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://wbarnard81.github.io/team-260-group-a",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
     "nodemon": "^2.0.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
